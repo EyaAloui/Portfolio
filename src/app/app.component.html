@@ -1,0 +1,288 @@
+<header class="site-header" [class.menu-open]="menuOpen">
+  <a class="brand" href="#accueil" aria-label="Retour à l'accueil">
+    <span class="brand-mark">AA</span>
+    <span>Aya Aloui</span>
+  </a>
+
+  <button
+    class="menu-toggle"
+    type="button"
+    aria-label="Ouvrir le menu"
+    [attr.aria-expanded]="menuOpen"
+    (click)="menuOpen = !menuOpen"
+  >
+    <span></span><span></span>
+  </button>
+
+  <nav aria-label="Navigation principale">
+    <a href="#a-propos" (click)="closeMenu()">{{ t.nav.about }}</a>
+    <a href="#experience" (click)="closeMenu()">{{ t.nav.experience }}</a>
+    <a href="#projets" (click)="closeMenu()">{{ t.nav.projects }}</a>
+    <a href="#contact" class="nav-cta" (click)="closeMenu()">{{ t.nav.contact }}</a>
+    <div class="language-switcher" aria-label="Choisir la langue">
+      <button
+        *ngFor="let lang of languages"
+        type="button"
+        [class.active]="currentLang === lang.code"
+        (click)="setLanguage(lang.code)"
+      >
+        {{ lang.label }}
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="accueil">
+    <div class="hero-lines" aria-hidden="true"></div>
+
+    <div class="hero-content reveal">
+      <div class="status-pill"><span></span> {{ t.hero.status }}</div>
+      <p class="eyebrow">{{ t.hero.eyebrow }}</p>
+      <h1>{{ t.hero.title }} <span>{{ t.hero.highlight }}</span></h1>
+      <p class="hero-copy">{{ t.hero.copy }}</p>
+
+      <div class="hero-stats">
+        <div><strong>3+</strong><span>{{ t.hero.stats[0] }}</span></div>
+        <div><strong>5</strong><span>{{ t.hero.stats[1] }}</span></div>
+        <div><strong>5</strong><span>{{ t.hero.stats[2] }}</span></div>
+      </div>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="#projets">{{ t.hero.viewProjects }}</a>
+        <a class="button button-outline" href="#contact">{{ t.hero.contact }}</a>
+        <a class="button button-outline" [href]="cvPath" download>{{ t.about.downloadCv }}</a>
+      </div>
+
+      <div class="quick-links">
+        <a href="mailto:aloui.eya@outlook.com" aria-label="Envoyer un email">Email</a>
+        <a href="https://wa.me/491773694060" target="_blank" rel="noopener" aria-label="Contacter Aya sur WhatsApp">WhatsApp</a>
+        <a href="https://www.linkedin.com/in/eya-aloui-280a001b9/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/EyaAloui" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
+    <div class="hero-photo-wrap reveal">
+      <div class="photo-shadow"></div>
+      <div class="hero-photo">
+        <img
+          *ngIf="photoAvailable"
+          src="assets/aya.jpg"
+          alt="Portrait professionnel d'Aya Aloui"
+          (error)="hidePhoto()"
+        >
+        <div class="portrait-placeholder" *ngIf="!photoAvailable">
+          <span>AA</span>
+        </div>
+      </div>
+      <div class="floating-card card-code"><span>&lt;/&gt;</span> {{ t.hero.cards[0] }}</div>
+      <div class="floating-card card-backend"><span>⚙</span> {{ t.hero.cards[1] }}</div>
+      <div class="floating-card card-realtime"><span>↯</span> {{ t.hero.cards[2] }}</div>
+    </div>
+  </section>
+
+  <section class="section about" id="a-propos">
+    <div class="section-title">
+      <p>{{ t.about.label }}</p>
+      <h2>{{ t.about.title }}</h2>
+    </div>
+
+    <div class="about-layout">
+      <div class="about-portrait">
+        <img src="assets/aya.jpg" alt="Aya Aloui">
+        <div class="location-pill">{{ t.about.location }}</div>
+      </div>
+
+      <div class="about-content">
+        <p class="lead">
+          {{ t.about.lead }}
+        </p>
+        <div class="about-columns">
+          <p>{{ t.about.p1 }}</p>
+          <p>{{ t.about.p2 }}</p>
+        </div>
+        <div class="skill-marquee" [attr.aria-label]="t.about.skillsLabel">
+          <span *ngFor="let skill of t.primarySkills">{{ skill }}</span>
+        </div>
+        <a class="button button-primary" [href]="cvPath" download>{{ t.about.downloadCv }}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section experience" id="experience">
+    <div class="section-title">
+      <p>{{ t.sections.journey }}</p>
+      <h2>{{ t.sections.experienceTitle }}</h2>
+    </div>
+
+    <div class="timeline">
+      <article class="timeline-item" *ngFor="let item of t.experiences; let i = index">
+        <div class="timeline-marker">{{ i + 1 }}</div>
+        <div class="timeline-date">{{ item.date }}</div>
+        <div class="timeline-card">
+          <div class="timeline-card-head">
+            <div>
+              <h3>{{ item.role }}</h3>
+              <p class="company">{{ item.company }}</p>
+            </div>
+          </div>
+          <p>{{ item.description }}</p>
+          <ul class="experience-details" *ngIf="item.details">
+            <li *ngFor="let detail of item.details">{{ detail }}</li>
+          </ul>
+          <div class="tags">
+            <span *ngFor="let tag of item.tags">{{ tag }}</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section projects" id="projets">
+    <div class="section-title centered">
+      <p>{{ t.sections.projectsLabel }}</p>
+      <h2>{{ t.sections.projectsTitle }}</h2>
+      <span>{{ t.sections.projectsHint }}</span>
+    </div>
+
+    <div class="project-grid">
+      <article class="project-card" *ngFor="let project of t.projects; let i = index">
+        <button
+          class="project-preview"
+          type="button"
+          (click)="openDemo(project)"
+          [attr.aria-label]="t.demo.openCta + ' ' + project.name"
+        >
+          <video
+            *ngIf="project.video"
+            class="project-media"
+            [src]="project.video"
+            [poster]="project.image"
+            muted
+            playsinline
+            preload="metadata"
+          ></video>
+          <img
+            *ngIf="project.image && !project.video"
+            class="project-media"
+            [src]="project.image"
+            [alt]="'Aperçu du projet ' + project.name"
+          >
+          <div class="preview-overlay">
+            <span class="play-button">{{ project.video ? '▶' : '↗' }}</span>
+            <span>{{ project.video ? t.demo.openVideo : t.demo.openProject }}</span>
+          </div>
+          <span class="project-number">0{{ i + 1 }}</span>
+        </button>
+
+        <div class="project-info">
+          <p>{{ project.type }} · {{ project.year }}</p>
+          <h3>{{ project.name }}</h3>
+          <p class="project-description">{{ project.description }}</p>
+          <div class="tags">
+            <span *ngFor="let tag of project.tags">{{ tag }}</span>
+          </div>
+          <button class="demo-link" type="button" (click)="openDemo(project)">
+            {{ t.demo.openCta }} <span>↗</span>
+          </button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section expertise">
+    <div class="section-title centered">
+      <p>{{ t.sections.expertiseLabel }}</p>
+      <h2>{{ t.sections.expertiseTitle }}</h2>
+    </div>
+
+    <div class="expertise-grid">
+      <article *ngFor="let group of t.expertise; let i = index">
+        <span class="expertise-icon">0{{ i + 1 }}</span>
+        <h3>{{ group.title }}</h3>
+        <p>{{ group.description }}</p>
+        <ul>
+          <li *ngFor="let item of group.items">{{ item }}</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section education">
+    <div class="section-title">
+      <p>{{ t.sections.educationLabel }}</p>
+      <h2>{{ t.sections.educationTitle }}</h2>
+    </div>
+    <div class="education-list">
+      <article *ngFor="let item of t.education">
+        <time>{{ item.date }}</time>
+        <div>
+          <h3>{{ item.degree }}</h3>
+          <p>{{ item.school }}</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div>
+      <p class="eyebrow">{{ t.contact.eyebrow }}</p>
+      <h2>{{ t.contact.title }}</h2>
+    </div>
+    <div class="contact-cards">
+      <a href="mailto:aloui.eya@outlook.com">
+        <span>Email</span>
+        <strong>aloui.eya&#64;outlook.com</strong>
+        <b>↗</b>
+      </a>
+      <a href="https://wa.me/491773694060" target="_blank" rel="noopener">
+        <span>WhatsApp</span>
+        <strong>+49 177 369 4060</strong>
+        <b>↗</b>
+      </a>
+    </div>
+    <div class="contact-footer">
+      <p>{{ t.contact.location }}</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/eya-aloui-280a001b9/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/EyaAloui" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p>© {{ currentYear }} Aya Aloui</p>
+    </div>
+  </section>
+</main>
+
+<div
+  class="demo-modal"
+  *ngIf="selectedProject"
+  role="dialog"
+  aria-modal="true"
+  [attr.aria-label]="t.demo.aria + ' ' + selectedProject.name"
+  (click)="closeDemo()"
+>
+  <div class="demo-dialog" (click)="$event.stopPropagation()">
+    <div class="demo-header">
+      <div>
+        <span>{{ selectedProject.type }}</span>
+        <h3>{{ selectedProject.name }}</h3>
+      </div>
+      <button type="button" [attr.aria-label]="t.demo.close" (click)="closeDemo()">×</button>
+    </div>
+    <div class="demo-stage">
+      <video
+        *ngIf="selectedProject.video"
+        [src]="selectedProject.video"
+        [poster]="selectedProject.image"
+        controls
+        autoplay
+        playsinline
+        preload="metadata"
+      ></video>
+      <img
+        *ngIf="!selectedProject.video && selectedProject.image"
+        [src]="selectedProject.image"
+        [alt]="'Démonstration du projet ' + selectedProject.name"
+      >
+    </div>
+  </div>
+</div>
