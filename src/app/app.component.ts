@@ -71,40 +71,49 @@ export class AppComponent {
       experiences: [
         {
           date: 'Oct. 2022 — Nov. 2025',
-          role: 'Développeuse Full Stack & Stagiaire',
+          role: 'Développeuse Full Stack · Cheffe de projet',
           company: 'CME Electronic',
-          description: 'Collaboration continue avec CME Electronic sur des projets full stack, incluant un stage d’ingénierie, un stage de Projet de Fin d’Études et le développement de solutions métier pour l’entreprise.',
+          description: 'Évolution au sein de CME Electronic, de stagiaire en ingénierie à développeuse Full Stack et cheffe de projet, avec la responsabilité de concevoir et piloter des solutions métier web, mobile et desktop.',
           details: [
-            'Stage PFE : développement d’applications full stack scalables avec Spring Boot, Symfony, Express.js et Angular, intégration de fonctionnalités temps réel avec Socket.io et conception d’une architecture backend avec Express.js.',
-            'Développeuse Full Stack & Cheffe de projet : conception et intégration d’API REST performantes et sécurisées, participation aux architectures backend temps réel, coordination des tâches techniques, planification et suivi des livrables.',
-            'Stage d’ingénierie : développement d’un système de contrôle d’accès, gestion des utilisateurs et mise en place des autorisations.',
-            'Développement d’un site e-commerce pour CME Electronic avec Symfony, PHP, Twig, Doctrine ORM et MySQL.'
+            'Conception d’architectures full stack évolutives et d’API REST sécurisées avec Spring Boot, Symfony, Express.js et Angular.',
+            'Développement de fonctionnalités temps réel avec Socket.io et intégration d’applications web, mobile et desktop.',
+            'Pilotage des tâches techniques : clarification des besoins, planification, coordination de l’équipe et suivi des livrables.',
+            'Réalisation de solutions métier, notamment une plateforme de contrôle d’accès et un site e-commerce complet.'
           ],
           tags: ['Spring Boot', 'Angular', 'Symfony', 'Express.js', 'Socket.io', 'PHP', 'Twig', 'Doctrine ORM']
         },
         {
           date: 'Août 2023',
-          role: 'Développeuse Web · Stage',
+          role: 'Développeuse Full Stack PHP/Symfony · Stage',
           company: 'ESPRIT',
-          description: 'Implémentation d’une plateforme web de gestion des offres de mobilité internationale pour ESPRIT. La faculté gère les comptes des étudiants et des partenaires, les partenaires publient les offres de mobilité, et les étudiants peuvent consulter les opportunités, postuler et suivre l’historique complet de leurs dépôts. Le processus de sélection repose sur un système de scoring permettant d’évaluer et de prioriser les candidatures.',
+          description: 'Conception d’une plateforme de mobilité internationale centralisant les offres, les candidatures et les comptes étudiants et partenaires. Développement du workflow de candidature, de l’historique des dépôts et d’un système de scoring facilitant l’évaluation et la priorisation des dossiers.',
           tags: ['Symfony 5', 'PHP', 'Twig', 'Doctrine ORM', 'MySQL']
         },
         {
           date: 'Jan. — Mai 2022',
-          role: 'Stage PFE · Licence en Télécommunications',
+          role: 'Ingénieure Réseaux & Monitoring · Stage PFE',
           company: 'Société de Nutrition Animale',
-          description: 'Mise en place d’une solution de monitoring réseau permettant de superviser la disponibilité des équipements, de suivre les performances système et d’améliorer la fiabilité de l’infrastructure.',
+          description: 'Conception et déploiement d’une solution de supervision réseau avec Zabbix afin de centraliser le suivi de la disponibilité des équipements, analyser les performances système et renforcer la fiabilité opérationnelle de l’infrastructure.',
           tags: ['Zabbix', 'GNS3', 'Linux']
         },
         {
           date: 'Août 2021',
-          role: 'Développeuse Web · Stage',
+          role: 'Développeuse d’application Web · Stage',
           company: 'Ciments de Bizerte',
-          description: 'Conception et développement d’une plateforme web dédiée à la gestion des stagiaires et de leurs données.',
+          description: 'Analyse des besoins, conception et développement d’une plateforme web centralisant la gestion des stagiaires et de leurs données, avec une interface structurée et une base de données dédiée.',
           tags: ['Développement web', 'UI', 'Base de données']
         }
       ],
       projects: [
+        {
+          type: 'Application web · Freelance',
+          year: '2026',
+          name: 'RideShare · Covoiturage',
+          description: 'Conception et développement d’une plateforme de covoiturage reliant conducteurs et passagers. Les conducteurs gèrent leurs véhicules, publient leurs trajets et valident les demandes, tandis que les passagers recherchent, réservent et évaluent leurs voyages. La solution intègre également une messagerie et un espace d’administration pour gérer les utilisateurs, les trajets, les signalements et les statistiques.',
+          tags: ['PHP', 'HTML', 'CSS', 'JavaScript', 'SQL', 'MySQL'],
+          image: '',
+          video: 'assets/Covoiturage.mp4'
+        },
         {
           type: 'Application métier · Temps réel',
           year: '2025',
@@ -202,28 +211,37 @@ export class AppComponent {
       experiences: [
         {
           date: 'Oct. 2022 — Nov. 2025',
-          role: 'Full Stack Developer & Intern',
+          role: 'Full Stack Developer · Project Lead',
           company: 'CME Electronic',
-          description: 'Continuous collaboration with CME Electronic on full stack projects, including an engineering internship, a graduation project internship and business applications for the company.',
+          description: 'Progressed from engineering intern to Full Stack Developer and Project Lead, taking ownership of the design and delivery of business solutions across web, mobile and desktop platforms.',
           details: [
-            'Graduation project: scalable full stack applications with Spring Boot, Symfony, Express.js and Angular, real-time features with Socket.io and backend architecture with Express.js.',
-            'Full Stack Developer & Project Lead: design and integration of secure REST APIs, contribution to real-time backend architectures, task coordination, planning and delivery tracking.',
-            'Engineering internship: development of an access control system, user management and permission management.',
-            'Development of an e-commerce website for CME Electronic with Symfony, PHP, Twig, Doctrine ORM and MySQL.'
+            'Designed scalable full stack architectures and secure REST APIs using Spring Boot, Symfony, Express.js and Angular.',
+            'Built real-time features with Socket.io and integrated web, mobile and desktop applications.',
+            'Led technical delivery through requirements clarification, task planning, team coordination and milestone tracking.',
+            'Delivered business solutions including an access-control platform and a complete e-commerce website.'
           ],
           tags: ['Spring Boot', 'Angular', 'Symfony', 'Express.js', 'Socket.io', 'PHP', 'Twig', 'Doctrine ORM']
         },
         {
           date: 'Aug. 2023',
-          role: 'Web Developer · Internship',
+          role: 'PHP/Symfony Full Stack Developer · Internship',
           company: 'ESPRIT',
-          description: 'Implemented a web platform for international mobility opportunities at ESPRIT. The faculty manages student and partner accounts, partners publish mobility offers, and students can browse opportunities, apply and track their complete application history. Selection is supported by a scoring system.',
+          description: 'Designed a platform centralizing international mobility offers, applications, and student and partner accounts. Implemented the application workflow, submission history and a scoring system supporting candidate assessment and prioritization.',
           tags: ['Symfony 5', 'PHP', 'Twig', 'Doctrine ORM', 'MySQL']
         },
-        { date: 'Jan. — May 2022', role: 'Graduation Internship · Telecommunications Bachelor', company: 'Société de Nutrition Animale', description: 'Implemented a network monitoring solution to supervise equipment availability, track system performance and improve infrastructure reliability.', tags: ['Zabbix', 'GNS3', 'Linux'] },
-        { date: 'Aug. 2021', role: 'Web Developer · Internship', company: 'Ciments de Bizerte', description: 'Designed and developed a web platform for intern management and data handling.', tags: ['Web development', 'UI', 'Database'] }
+        { date: 'Jan. — May 2022', role: 'Network & Monitoring Engineer · Graduation Internship', company: 'Société de Nutrition Animale', description: 'Designed and deployed a Zabbix-based network monitoring solution to centralize equipment availability, analyze system performance and improve the operational reliability of the infrastructure.', tags: ['Zabbix', 'GNS3', 'Linux'] },
+        { date: 'Aug. 2021', role: 'Web Application Developer · Internship', company: 'Ciments de Bizerte', description: 'Gathered requirements, designed and developed a web platform centralizing intern records through a structured interface and a dedicated database.', tags: ['Web development', 'UI', 'Database'] }
       ],
       projects: [
+        {
+          type: 'Web application · Freelance',
+          year: '2026',
+          name: 'RideShare · Carpooling',
+          description: 'Designed and developed a carpooling platform connecting drivers and passengers. Drivers manage their vehicles, publish trips and approve booking requests, while passengers search, book and review their journeys. The solution also includes messaging and an administration area for managing users, trips, reports and statistics.',
+          tags: ['PHP', 'HTML', 'CSS', 'JavaScript', 'SQL', 'MySQL'],
+          image: '',
+          video: 'assets/Covoiturage.mp4'
+        },
         { type: 'Business app · Real time', year: '2025', name: 'CMETrack', description: 'A complete application for intelligent route calculation and real-time pricing. Owners manage taxis, assign drivers to vehicles and monitor meters with detailed history. Drivers start and stop the meter and track daily and weekly revenue.', tags: ['Angular', 'Express.js', 'Socket.io', 'Electron.js', 'React Native'], image: 'assets/media/smart-taxi.png', video: 'assets/CMETrack.mp4' },
         { type: 'E-commerce', year: '2024', name: 'CME Electronic', description: 'Designed and developed a complete e-commerce website for CME Electronic, including product presentation, catalog management, customer journey and data modeling with Doctrine ORM.', tags: ['Symfony', 'PHP', 'Twig', 'Doctrine ORM', 'MySQL', 'MVC'], image: 'assets/media/cme-ecommerce.webp', video: 'assets/Ecommerce.mp4' },
         { type: 'Access control', year: '2024', name: 'DAMS', description: 'Web platform for access management integrated with the existing system, adding advanced security and tracking features. It dematerializes badges through smartphones, enables secure door opening and provides detailed access history.', tags: ['Express.js', 'JavaScript', 'MySQL', 'Security', 'Access management'], image: '', video: 'assets/DAMS.mp4' },
@@ -281,22 +299,31 @@ export class AppComponent {
       experiences: [
         {
           date: 'Okt. 2022 — Nov. 2025',
-          role: 'Full-Stack-Entwicklerin & Praktikantin',
+          role: 'Full-Stack-Entwicklerin · Projektleiterin',
           company: 'CME Electronic',
-          description: 'Kontinuierliche Zusammenarbeit mit CME Electronic an Full-Stack-Projekten, einschließlich Engineering-Praktikum, Abschlussprojekt und Geschäftsanwendungen für das Unternehmen.',
+          description: 'Weiterentwicklung von der Engineering-Praktikantin zur Full-Stack-Entwicklerin und Projektleiterin mit Verantwortung für Konzeption und Umsetzung von Geschäftslösungen für Web, Mobile und Desktop.',
           details: [
-            'Abschlussprojekt: skalierbare Full-Stack-Anwendungen mit Spring Boot, Symfony, Express.js und Angular, Echtzeitfunktionen mit Socket.io und Backend-Architektur mit Express.js.',
-            'Full-Stack-Entwicklerin & Projektleiterin: Entwurf und Integration sicherer REST-APIs, Mitarbeit an Echtzeit-Backend-Architekturen, Aufgabenkoordination, Planung und Lieferverfolgung.',
-            'Engineering-Praktikum: Entwicklung eines Zutrittskontrollsystems, Benutzerverwaltung und Berechtigungsverwaltung.',
-            'Entwicklung einer E-Commerce-Website für CME Electronic mit Symfony, PHP, Twig, Doctrine ORM und MySQL.'
+            'Konzeption skalierbarer Full-Stack-Architekturen und sicherer REST-APIs mit Spring Boot, Symfony, Express.js und Angular.',
+            'Entwicklung von Echtzeitfunktionen mit Socket.io sowie Integration von Web-, Mobile- und Desktop-Anwendungen.',
+            'Steuerung der technischen Umsetzung: Anforderungsklärung, Aufgabenplanung, Teamkoordination und Terminverfolgung.',
+            'Umsetzung von Geschäftslösungen, darunter eine Zutrittskontrollplattform und eine vollständige E-Commerce-Website.'
           ],
           tags: ['Spring Boot', 'Angular', 'Symfony', 'Express.js', 'Socket.io', 'PHP', 'Twig', 'Doctrine ORM']
         },
-        { date: 'Aug. 2023', role: 'Webentwicklerin · Praktikum', company: 'ESPRIT', description: 'Implementierung einer Webplattform für internationale Mobilitätsangebote bei ESPRIT. Die Fakultät verwaltet Konten für Studierende und Partner, Partner veröffentlichen Angebote, und Studierende können Angebote ansehen, sich bewerben und ihre vollständige Bewerbungshistorie verfolgen. Die Auswahl wird durch ein Scoring-System unterstützt.', tags: ['Symfony 5', 'PHP', 'Twig', 'Doctrine ORM', 'MySQL'] },
-        { date: 'Jan. — Mai 2022', role: 'Abschlusspraktikum · Bachelor Telekommunikation', company: 'Société de Nutrition Animale', description: 'Einführung einer Netzwerk-Monitoring-Lösung zur Überwachung der Verfügbarkeit von Geräten, zur Analyse der Systemleistung und zur Verbesserung der Infrastrukturzuverlässigkeit.', tags: ['Zabbix', 'GNS3', 'Linux'] },
-        { date: 'Aug. 2021', role: 'Webentwicklerin · Praktikum', company: 'Ciments de Bizerte', description: 'Konzeption und Entwicklung einer Webplattform zur Verwaltung von Praktikantinnen und Praktikanten sowie ihrer Daten.', tags: ['Webentwicklung', 'UI', 'Datenbank'] }
+        { date: 'Aug. 2023', role: 'PHP/Symfony Full-Stack-Entwicklerin · Praktikum', company: 'ESPRIT', description: 'Konzeption einer Plattform zur zentralen Verwaltung internationaler Mobilitätsangebote, Bewerbungen sowie Studierenden- und Partnerkonten. Umsetzung des Bewerbungsworkflows, der Einreichungshistorie und eines Scoring-Systems zur Bewertung und Priorisierung von Bewerbungen.', tags: ['Symfony 5', 'PHP', 'Twig', 'Doctrine ORM', 'MySQL'] },
+        { date: 'Jan. — Mai 2022', role: 'Netzwerk- & Monitoring-Ingenieurin · Abschlusspraktikum', company: 'Société de Nutrition Animale', description: 'Konzeption und Einführung einer Zabbix-basierten Monitoring-Lösung zur zentralen Überwachung der Geräteverfügbarkeit, Analyse der Systemleistung und Verbesserung der betrieblichen Infrastrukturzuverlässigkeit.', tags: ['Zabbix', 'GNS3', 'Linux'] },
+        { date: 'Aug. 2021', role: 'Webanwendungsentwicklerin · Praktikum', company: 'Ciments de Bizerte', description: 'Anforderungsanalyse, Konzeption und Entwicklung einer Webplattform zur zentralen Verwaltung von Praktikantendaten mit strukturierter Benutzeroberfläche und eigener Datenbank.', tags: ['Webentwicklung', 'UI', 'Datenbank'] }
       ],
       projects: [
+        {
+          type: 'Webanwendung · Freelance',
+          year: '2026',
+          name: 'RideShare · Mitfahrgelegenheit',
+          description: 'Konzeption und Entwicklung einer Mitfahrplattform, die Fahrer und Fahrgäste verbindet. Fahrer verwalten ihre Fahrzeuge, veröffentlichen Fahrten und bestätigen Buchungsanfragen, während Fahrgäste Fahrten suchen, buchen und bewerten. Die Lösung bietet außerdem Nachrichten sowie einen Administrationsbereich zur Verwaltung von Nutzern, Fahrten, Meldungen und Statistiken.',
+          tags: ['PHP', 'HTML', 'CSS', 'JavaScript', 'SQL', 'MySQL'],
+          image: '',
+          video: 'assets/Covoiturage.mp4'
+        },
         { type: 'Business-App · Echtzeit', year: '2025', name: 'CMETrack', description: 'Vollständige Anwendung für intelligente Routenberechnung und Echtzeit-Tarifberechnung. Besitzer verwalten Taxis, weisen Fahrer Fahrzeugen zu und überwachen Taxameter mit detaillierter Historie. Fahrer starten und stoppen den Zähler und verfolgen tägliche sowie wöchentliche Einnahmen.', tags: ['Angular', 'Express.js', 'Socket.io', 'Electron.js', 'React Native'], image: 'assets/media/smart-taxi.png', video: 'assets/CMETrack.mp4' },
         { type: 'E-Commerce', year: '2024', name: 'CME Electronic', description: 'Konzeption und Entwicklung einer vollständigen E-Commerce-Website für CME Electronic mit Produktpräsentation, Katalogverwaltung, Customer Journey und Datenmodellierung mit Doctrine ORM.', tags: ['Symfony', 'PHP', 'Twig', 'Doctrine ORM', 'MySQL', 'MVC'], image: 'assets/media/cme-ecommerce.webp', video: 'assets/Ecommerce.mp4' },
         { type: 'Zutrittskontrolle', year: '2024', name: 'DAMS', description: 'Webplattform zur Zutrittsverwaltung, integriert in das bestehende System, mit erweiterten Sicherheits- und Tracking-Funktionen. Sie digitalisiert Ausweise über Smartphones, ermöglicht sicheres Öffnen von Türen und bietet eine detaillierte Zugriffshistorie.', tags: ['Express.js', 'JavaScript', 'MySQL', 'Sicherheit', 'Zugriffsverwaltung'], image: '', video: 'assets/DAMS.mp4' },
